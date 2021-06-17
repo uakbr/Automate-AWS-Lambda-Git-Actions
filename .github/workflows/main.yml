@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python all python version
         uses: actions/setup-python@v2
         with:
-          python-version: 3.7
+          python-version: 3.9
           architecture: x64
 
       - name: Install Python Virtual ENV
@@ -48,7 +48,7 @@ jobs:
 
       - name: Create Zipfile archive of Dependencies
         run: |
-          cd ./venv/lib/python3.7/site-packages
+          cd ./venv/lib/python3.9/site-packages
           zip -r9 ../../../../api.zip .
 
       - name: Add App to Zipfile
