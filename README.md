@@ -145,4 +145,3 @@ Let us break it down and have a look at each part of the workflow:
 * **Step 9:** Upload the api.zip to GitHub server as an artifact using `actions/upload-artifact@v2`. This will enable the next job to retrieve back the artifact file for the deployment of our Lambda package which is our `api.zip` file.
 
 Phew! We have completed our CI workflow using GitHub Actions. Let’s make some minor changes in our code and try to push our code to the main branch. Make sure you’re using the CI code above in the `main.yml` file to test the CI workflow. This is how the result will look like when we have trigger the workflow by our code push event.
-
