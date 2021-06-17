@@ -134,14 +134,14 @@ Let us break it down and have a look at each part of the workflow:
 * The runner used in the workflow is ubuntu-latest (Ubuntu Linux Operating Systems)
 * These are the sequential series of steps defined in the CI workflow:
 
-**Step 1:** Perform `actions/checkout@v2` that will checkout to our repository and downloads it to the runner.
-**Step 2:** Setup python 3.7 by using actions - `actions/setup-python@v2`
-**Step 3:** Install Python Virtual Environment (virtualenv) package
-**Step 4:** Caching Dependencies using `actions/cache@v2.` This step will increase the performance of the project workflow that consists of many large dependencies by efficiently reduce the time required for downloading. For further explanation, please read the GitHub Actions Documentations.
-**Step 5:** Activate the virtualenv and install all the dependencies that consist inside `requirements.txt`.
-**Step 6:** Run Unit Tests. By the way, we need to activate again the virtualenv before running the test as GitHub Actions doesn’t preserve the environment.
-**Step 7:** Package our Lambda by zipping all the dependencies in the venv site-packages and place it in our root directory. The zip file is named `api.zip`.
-**Step 8:** Add the contents of our app folder into `api.zip`.
-**Step 9:** Upload the api.zip to GitHub server as an artifact using `actions/upload-artifact@v2`. This will enable the next job to retrieve back the artifact file for the deployment of our Lambda package which is our `api.zip` file.
+* **Step 1:** Perform `actions/checkout@v2` that will checkout to our repository and downloads it to the runner.
+* **Step 2:** Setup python 3.7 by using actions - `actions/setup-python@v2`
+* **Step 3:** Install Python Virtual Environment (virtualenv) package
+* **Step 4:** Caching Dependencies using `actions/cache@v2.` This step will increase the performance of the project workflow that consists of many large dependencies by efficiently reduce the time required for downloading. For further explanation, please read the GitHub Actions Documentations.
+* **Step 5:** Activate the virtualenv and install all the dependencies that consist inside `requirements.txt`.
+* **Step 6:** Run Unit Tests. By the way, we need to activate again the virtualenv before running the test as GitHub Actions doesn’t preserve the environment.
+* **Step 7:** Package our Lambda by zipping all the dependencies in the venv site-packages and place it in our root directory. The zip file is named `api.zip`.
+* **Step 8:** Add the contents of our app folder into `api.zip`.
+* **Step 9:** Upload the api.zip to GitHub server as an artifact using `actions/upload-artifact@v2`. This will enable the next job to retrieve back the artifact file for the deployment of our Lambda package which is our `api.zip` file.
 
 Phew! We have completed our CI workflow using GitHub Actions. Let’s make some minor changes in our code and try to push our code to the main branch. Make sure you’re using the CI code above in the `main.yml` file to test the CI workflow. This is how the result will look like when we have trigger the workflow by our code push event.
