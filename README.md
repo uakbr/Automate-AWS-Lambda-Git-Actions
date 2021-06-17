@@ -1,6 +1,16 @@
 ## AWS Lambda FastAPI CI/CD Pipeline using GitHub Actions
 This project repository contains the github actions workflow of CI/CD Pipeline for FastAPI to AWS Lambda.
 
+## What does this solve?
+* As software/devops engineers focused on bringing our code to life, we all face the same problems where we need to perform tasks that are boring, repetitive and sometimes a total waste of time. For instance, one of them is the process of running the unit tests on various environments and then deploying our software to various delivery platform. The processes takes longer than they should and surely makes our day at work inefficient and unproductive. Have you ever wondered:
+
+   * How can I automate all these boring repetitive testing and deployment processes?
+   * Do we have any kind of method that could solve these problems?
+
+CI/CD is one of the best practices in software development as it reduces the repetitive process of unit testing and the deployment of the software.
+
+We accomplish our goals via **Gitub Actions** as demonstrated by this repository.
+
 ## Steps:
 1. Create a GitHub Repository
 2. Clone your repository to local machine
