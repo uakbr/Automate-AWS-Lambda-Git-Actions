@@ -7,9 +7,9 @@ This project repository contains the github actions workflow of CI/CD Pipeline f
    * How can I automate all these boring repetitive testing and deployment processes?
    * Do we have any kind of method that could solve these problems?
 
-CI/CD is one of the best practices in software development as it reduces the repetitive process of unit testing and the deployment of the software.
+* CI/CD is one of the best practices in software development as it reduces the repetitive process of unit testing and the deployment of the software.
 
-We accomplish our goals via **Gitub Actions** as demonstrated by this repository.
+* We accomplish our goals via **Gitub Actions** as demonstrated by this repository.
 
 ## Steps:
 1. Create a GitHub Repository
